@@ -17,6 +17,8 @@ enable_testing()
 add_executable(sap1_tests
     tests/test_main.cpp
     tests/test_smoke.cpp
+    tests/test_control_word.cpp
+    tests/test_register.cpp
 )
 
 # doctest.h lives in third_party/doctest; the core headers you write will live
