@@ -21,6 +21,7 @@ add_executable(sap1_tests
     tests/test_register.cpp
     tests/test_program_counter.cpp
     tests/test_instruction_register.cpp
+    tests/test_alu.cpp
 )
 
 # doctest.h lives in third_party/doctest; the core headers you write will live
