@@ -41,6 +41,7 @@ add_executable(sap1_tests
     tests/test_instruction_register.cpp
     tests/test_alu.cpp
     tests/test_ram.cpp
+    tests/test_microcode.cpp
 )
 
 # Linking sap1_core gives the tests the core's include path automatically.

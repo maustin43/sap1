@@ -2,17 +2,22 @@
 #include <algorithm>
 #include <span>
 
+namespace
+{
+    static constexpr std::size_t kAddressMask = sap1::Ram::kSize;
+}
+
 namespace sap1
 {
 
     std::uint8_t Ram::read(std::uint8_t address) const noexcept
     {
-        return data_[address & 0x0F];
+        return data_[address & (kAddressMask - 1)];
     }
 
     void Ram::write(std::uint8_t address, std::uint8_t value) noexcept
     {
-        data_[address & 0x0F] = value;
+        data_[address & (kAddressMask - 1)] = value;
     }
 
     void Ram::clear() noexcept

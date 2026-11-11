@@ -12,6 +12,7 @@ TEST_CASE("RAM starts zeroed")
     {
         CHECK(ram.read(static_cast<std::uint8_t>(i)) == 0);
     }
+    static_assert((Ram::kSize & (Ram::kSize - 1)) == 0, "kSize must be a power of two");
 }
 
 TEST_CASE("RAM reads back what was written")
